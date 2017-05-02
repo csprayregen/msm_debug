@@ -8,17 +8,18 @@ class MoviesController < ApplicationController
   end
 
   def new_form
+    render("/movies/new_form.html.erb")
   end
 
   def create_row
-    @movie.title = params[:the_title]
-    @movie.year = params[:the_year]
-    @movie.duration = params[:the_duration]
-    @movie.description = params[:the_description]
-    @movie.image_url = params[:the_image_url]
-    @movie.director_id = params[:the_director_id]
+    @movies.title = params[:the_title]
+    @movies.year = params[:the_year]
+    @movies.duration = params[:the_duration]
+    @movies.description = params[:the_description]
+    @movies.image_url = params[:the_image_url]
+    @movies.director_id = params[:the_director_id]
 
-    @movie.save
+    @movies.save
 
     render("show")
   end
