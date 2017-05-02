@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
   end
 
   def create_row
-    @movie.title = params[:the_title]
+    @movies.title = params[:the_title]
     @movies.year = params[:the_year]
     @movies.duration = params[:the_duration]
     @movies.description = params[:the_description]
