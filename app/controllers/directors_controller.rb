@@ -40,7 +40,7 @@ class DirectorsController < ApplicationController
     @director.image_url = params[:image_url]
 
     @director.save
-    redirect_to("/directors/{@director.id}")
+    redirect_to("/directors/#{@director.id}")
     #{p.id}
   end
 
